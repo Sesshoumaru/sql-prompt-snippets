@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alter column </Title>
+      <Shortcut>ac</Shortcut>
+      <Description>alter column</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[if not exists (select * from sys.columns where object_id = object_id('$table_name$') and name = '$column_name$')
+	alter table $table_name$ add $column_name$ $field_type$
+go]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

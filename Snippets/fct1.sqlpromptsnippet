@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>create table with primary_field</Title>
+      <Shortcut>fct1</Shortcut>
+      <Description>create table with primary_field</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+      </Declarations>
+      <Code Language="sql"><![CDATA[if not exists (select 1 from sys.tables where name = '$table_name$')
+    create table $table_name$
+(
+    [$primary_field$] bigint identity(1,1) not null primary key,
+    $CURSOR$
+)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

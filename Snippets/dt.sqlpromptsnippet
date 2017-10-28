@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>drop table</Title>
+      <Shortcut>dt</Shortcut>
+      <Description>drop table</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[drop table $table_name$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

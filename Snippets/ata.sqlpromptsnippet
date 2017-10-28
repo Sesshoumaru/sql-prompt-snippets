@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alter table add column </Title>
+      <Shortcut>ata</Shortcut>
+      <Description>add column</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[alter table $table_name$ add $column_name$ $field_type$
+go]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

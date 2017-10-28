@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>create stored procedure</Title>
+      <Shortcut>cp</Shortcut>
+      <Description>create stored procedure</Description>
+      <Author />
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>procedure_name</ID>
+          <ToolTip />
+          <Default>[schema].[procedure_name]</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="sql"><![CDATA[create procedure $procedure_name$
+    @parameter_name as int
+as
+begin
+    $CURSOR$
+end
+go
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

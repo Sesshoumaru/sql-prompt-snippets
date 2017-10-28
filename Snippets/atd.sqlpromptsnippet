@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alter table drop column </Title>
+      <Shortcut>atd</Shortcut>
+      <Description>drop column</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[alter table $table_name$ drop column $column_name$ 
+go]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

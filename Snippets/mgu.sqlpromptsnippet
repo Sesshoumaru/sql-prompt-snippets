@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>merge into update</Title>
+      <Shortcut>mgu</Shortcut>
+      <Description>merge into update fragment</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[merge into $table_name1$ a 
+using
+(
+	select * from $table_name2$
+) as b on(a.$column_name1$ = b.$column_name2$)
+when matched then update set b.$column_name3$ = a.$column_name4$;
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

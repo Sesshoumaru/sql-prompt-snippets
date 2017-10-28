@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><CodeSnippets>
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>alter column </Title>
-      <Shortcut>ac</Shortcut>
-      <Description>alter column</Description>
+      <Title>alter table add column </Title>
+      <Shortcut>fata</Shortcut>
+      <Description>add column</Description>
       <Author/>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alter procedure</Title>
+      <Shortcut>ap</Shortcut>
+      <Description>alter procedure fragment</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[alter procedure ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

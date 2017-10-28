@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>create inline table-valued function</Title>
+      <Shortcut>citf</Shortcut>
+      <Description>create inline table-valued function</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>function_name</ID>
+          <ToolTip/>
+          <Default>[schema].[function_name]</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="sql"><![CDATA[create function $function_name$
+    (@parameter_name as int)
+returns table
+--with encryption|schemabinding, ...
+as
+return ( $SELECTEDTEXT$$CURSOR$ )
+go
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

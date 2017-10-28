@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>cretae trigger</Title>
+      <Shortcut>fctg</Shortcut>
+      <Description>cretae trigger</Description>
+      <Author />
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>triger_name</ID>
+          <ToolTip />
+          <Default />
+        </Literal>
+        <Literal>
+          <ID>table_name</ID>
+          <ToolTip />
+          <Default />
+        </Literal>
+      </Declarations>
+      <Code Language="sql"><![CDATA[if exists (select * from sys.triggers where name = '$triger_name$')
+	drop trigger $triger_name$
+go
+
+create trigger $triger_name$
+on $table_name$ after insert,update,delete
+as 
+begin 
+	$CURSOR$
+end
+go]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

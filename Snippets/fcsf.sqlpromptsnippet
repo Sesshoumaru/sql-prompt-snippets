@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>create scalar function</Title>
+      <Shortcut>fcsf</Shortcut>
+      <Description>create scalar function</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>function_name</ID>
+          <ToolTip/>
+          <Default>[schema].[function_name]</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="sql"><![CDATA[if exists (select * from sys.objects where name = '$function_name$' and type = 'FN')
+	  drop function $function_name$
+go
+
+create function $function_name$
+    (@parameter_name as int)
+returns int
+--with encryption|schemabinding, ...
+as
+begin
+    return $SELECTEDTEXT$$CURSOR$
+end
+go
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

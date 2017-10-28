@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>drop stored procedure</Title>
+      <Shortcut>fdp</Shortcut>
+      <Description>drop stored procedure</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[if exists (select * from sys.objects where name = '$procedure_name$' and type = 'P')
+	  drop procedure $procedure_name$
+go]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

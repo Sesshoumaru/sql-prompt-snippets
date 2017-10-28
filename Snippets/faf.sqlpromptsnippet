@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alter function</Title>
+      <Shortcut>faf</Shortcut>
+      <Description>alter function fragment</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[alter function ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

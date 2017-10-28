@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>merge into insert</Title>
+      <Shortcut>mgi</Shortcut>
+      <Description>merge into insert fragment</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[merge into $table_name1$ a 
+using
+(
+	select * from $table_name2$
+) as b on(a.$column_name1$ = b.$column_name2$)
+when not matched then insert ($column_name3$) values($column_name3$);
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

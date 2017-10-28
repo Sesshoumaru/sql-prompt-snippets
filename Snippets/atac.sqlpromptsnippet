@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>alter table alter column</Title>
+      <Shortcut>atac</Shortcut>
+      <Description>modify column</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>table_name</ID>
+          <ToolTip/>
+          <Default>[schema].[table_name]</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="sql"><![CDATA[alter table $table_name$ alter column $column_name$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

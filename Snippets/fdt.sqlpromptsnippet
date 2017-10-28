@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>drop table</Title>
+      <Shortcut>fdt</Shortcut>
+      <Description>drop table</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[if exists (select 1 from sys.tables where name = '$table_name$')
+    drop table $table_name$
+go]]></Code>
+
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

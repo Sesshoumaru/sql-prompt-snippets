@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create view</Title>
+      <Shortcut>fcv</Shortcut>
+      <Description>Create view</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>view_name</ID>
+          <ToolTip/>
+          <Default>[schema].[view_name]</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="sql"><![CDATA[if exists (select * from sys.views where name = '$view_name$')
+	  drop view $view_name$
+go
+create view $view_name$
+--with encryption, schemabinding, view_metadata
+as
+    $SELECTEDTEXT$$CURSOR$
+-- with check option
+go
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

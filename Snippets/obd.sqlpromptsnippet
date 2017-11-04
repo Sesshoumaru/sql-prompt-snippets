@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>order by desc</Title>
+      <Shortcut>obd</Shortcut>
+      <Description>order by fragment</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[order by $CURSOR$ desc]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

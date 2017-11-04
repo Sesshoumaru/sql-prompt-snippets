@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>select * from </Title>
+      <Shortcut>ssfnl</Shortcut>
+      <Description>select * from with nolock fragment</Description>
+      <Author/>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations/>
+      <Code Language="sql"><![CDATA[select * from $CURSOR$ with (nolock)]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

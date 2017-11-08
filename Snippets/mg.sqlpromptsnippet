@@ -16,8 +16,8 @@ using
 (
 	select * from $table_name2$
 ) as b on(a.$column_name1$ = b.$column_name2$)
-when matched then update set b.$column_name3$ = a.$column_name4$
-when not matched then insert ($column_name5$) values($column_name5$);
+when matched then update set a.$column_name3$ = b.$column_name4$
+when not matched then insert ($column_name5$) values(b.$column_name5$);
 ]]></Code>
     </Snippet>
   </CodeSnippet>

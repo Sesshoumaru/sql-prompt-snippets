@@ -16,7 +16,7 @@ using
 (
 	select * from $table_name2$
 ) as b on(a.$column_name1$ = b.$column_name2$)
-when not matched then insert ($column_name3$) values($column_name3$);
+when not matched then insert ($column_name3$) values(b.$column_name3$);
 ]]></Code>
     </Snippet>
   </CodeSnippet>

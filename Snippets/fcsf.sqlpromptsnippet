@@ -16,14 +16,29 @@
           <ToolTip/>
           <Default>[schema].[function_name]</Default>
         </Literal>
+          <Literal>
+        <ID>parameter_name</ID>
+          <ToolTip/>
+          <Default>parameter_name</Default>
+        </Literal>
+          <Literal>
+         <ID>parameter_type</ID>
+          <ToolTip/>
+          <Default>int</Default>
+        </Literal>
+              <Literal>
+         <ID>return_type</ID>
+          <ToolTip/>
+          <Default>int</Default>
+        </Literal>
       </Declarations>
       <Code Language="sql"><![CDATA[if exists (select * from sys.objects where name = '$function_name$' and type = 'FN')
 	  drop function $function_name$
 go
 
 create function $function_name$
-    (@parameter_name as int)
-returns int
+    (@parameter_name as $parameter_type$)
+returns $return_type$
 --with encryption|schemabinding, ...
 as
 begin
